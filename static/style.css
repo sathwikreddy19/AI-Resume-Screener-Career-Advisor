@@ -1,0 +1,268 @@
+/* ================================
+   GLOBAL STYLING
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   MAIN CONTAINER
+================================ */
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+
+/* ================================
+   MAIN HEADINGS
+================================ */
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #111827;
+}
+
+h2 {
+    color: #1f2937;
+    margin-top: 20px;
+}
+
+h3 {
+    color: #374151;
+}
+
+
+/* ================================
+   CARDS
+================================ */
+
+.card {
+    background: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ================================
+   FORMS
+================================ */
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+
+/* ================================
+   INPUTS
+================================ */
+
+input[type="text"],
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-family: inherit;
+}
+
+textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* ================================
+   ERROR MESSAGE
+================================ */
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+button {
+    margin-top: 15px;
+    padding: 12px 22px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+
+/* ================================
+   LINKS
+================================ */
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* ================================
+   LISTS
+================================ */
+
+ul,
+ol {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+
+/* ================================
+   TABLES
+================================ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #eef2ff;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background: #f9fafb;
+}
+
+
+/* ================================
+   SCORE
+================================ */
+
+.score {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+
+/* ================================
+   DIVIDER
+================================ */
+
+hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 30px 0;
+}
+
+
+/* ================================
+   CAREER ADVISOR ANSWER
+================================ */
+
+.advisor-answer {
+    overflow-x: auto;
+}
+
+.advisor-answer p {
+    margin-bottom: 15px;
+}
+
+.advisor-answer table {
+    min-width: 700px;
+}
+
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

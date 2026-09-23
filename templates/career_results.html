@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Career Advisor</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <h1>AI Career Advisor</h1>
+
+
+        <!-- USER QUESTION -->
+
+        <div class="card">
+
+            <h2>Your Question</h2>
+
+            <p>
+                {{ question }}
+            </p>
+
+        </div>
+
+
+        <!-- AI ANSWER -->
+
+        <div class="card">
+
+            <h2>Career Advisor Answer</h2>
+
+            <div class="advisor-answer">
+                {{ rag_answer | safe }}
+            </div>
+
+        </div>
+
+
+        <!-- BACK LINK -->
+
+        <div class="card">
+
+            <a href="/">
+                ← Back to Home
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

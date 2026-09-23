@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Resume Screener & Career Advisor</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+<body>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <h1>AI Resume Screener & Career Advisor</h1>
+
+
+        <!-- =========================
+             RESUME SCREENER CARD
+        ========================== -->
+
+        <div class="card">
+
+            <h2>Resume Screener</h2>
+
+            <form action="/analyze"
+                  method="POST"
+                  enctype="multipart/form-data">
+
+                <label for="resume">
+                    Upload Resume
+                </label>
+
+                <input
+                    type="file"
+                    id="resume"
+                    name="resume"
+                    accept=".pdf"
+                    required
+                >
+
+
+                <!-- Resume Error Message -->
+                {% if error %}
+                    <p class="error-message">
+                        {{ error }}
+                    </p>
+                {% endif %}
+
+
+                <br><br>
+
+
+                <label for="job_description">
+                    Job Description
+                </label>
+
+                <textarea
+                    id="job_description"
+                    name="job_description"
+                    placeholder="Paste your Job Description here"
+                    required
+                ></textarea>
+
+
+                <button type="submit">
+                    Analyze Resume
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- =========================
+             CAREER ADVISOR CARD
+        ========================== -->
+
+        <div class="card">
+
+            <h2>AI Career Advisor</h2>
+
+            <p>
+                Ask a career-related question and get guidance
+                using our AI Career Advisor.
+            </p>
+
+
+            <form action="/career-advisor"
+                  method="POST">
+
+                <label for="question">
+                    Ask a Career Question
+                </label>
+
+                <input
+                    type="text"
+                    id="question"
+                    name="question"
+                    placeholder="Example: How to become a Python developer?"
+                    required
+                >
+
+
+                <button type="submit">
+                    Ask Advisor
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
