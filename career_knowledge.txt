@@ -633,6 +633,209 @@ LLMs, Hugging Face, prompt engineering, Sentence Transformers,
 embeddings, FAISS, vector databases, LangChain, RAG, Flask,
 FastAPI, and model or inference APIs.
 
+==================================================
+AGENTIC AI
+==================================================
+
+Agentic AI refers to AI systems that can understand a goal, make decisions, plan a sequence of actions, use tools, execute tasks, observe results, and continue working toward the goal with limited human intervention.
+
+Agentic AI is different from a basic Generative AI system. A traditional Generative AI application mainly responds to a prompt and generates content. An Agentic AI system can reason about a goal, decide what actions are required, use external tools or APIs, maintain state or memory, and perform multi-step workflows.
+
+Core concepts of Agentic AI:
+
+1. AI Agents
+An AI agent is a system that receives a goal or task and determines the actions required to complete it.
+
+2. Large Language Models
+LLMs can act as the reasoning and decision-making component of an AI agent. They interpret instructions, understand context, generate plans, and decide which tools may be required.
+
+3. Goals
+An agent is usually given a goal rather than only a single isolated prompt. The agent works through multiple steps to achieve that goal.
+
+4. Planning
+Planning allows an agent to break a complex goal into smaller tasks and determine the order in which those tasks should be performed.
+
+5. Reasoning
+Reasoning helps the agent evaluate information and decide what action should be performed next.
+
+6. Tools
+Agents can interact with external tools such as APIs, databases, search systems, calculators, code execution environments, and other software services.
+
+7. Tool Calling
+Tool calling allows an LLM or agent to select and invoke an external function or tool when additional information or an external action is required.
+
+8. Memory
+Memory allows an agent to retain useful information from previous interactions or steps. Memory may include short-term conversation context or longer-term stored information.
+
+9. State
+State represents information about the current progress of an agent workflow, including completed tasks, intermediate results, and information required for future steps.
+
+10. Observation
+After performing an action or calling a tool, the agent receives a result or observation. It can analyze this result before deciding the next action.
+
+11. Action
+An action is an operation selected by the agent, such as calling an API, searching for information, querying a database, or executing a function.
+
+12. Agent Loop
+A simplified agent workflow can be represented as:
+
+Goal
+→ Reason
+→ Plan
+→ Select Action
+→ Use Tool
+→ Observe Result
+→ Decide Next Action
+→ Continue Until Goal Is Completed
+
+13. Human-in-the-Loop
+Some Agentic AI systems require human approval before performing important, sensitive, or irreversible actions.
+
+14. Multi-Agent Systems
+A multi-agent system contains multiple specialized AI agents that collaborate to complete a larger task. Different agents may handle research, planning, coding, validation, or other responsibilities.
+
+==================================================
+GENERATIVE AI VS AGENTIC AI
+==================================================
+
+Generative AI:
+- Primarily generates content in response to prompts.
+- Common outputs include text, images, code, audio, and summaries.
+- Usually follows a request-response interaction.
+- The user generally controls the workflow.
+
+Agentic AI:
+- Works toward a defined goal.
+- Can plan multiple steps.
+- Can decide which actions to perform.
+- Can use external tools and APIs.
+- Can observe results and adapt subsequent actions.
+- Can maintain workflow state or memory.
+- May operate with a higher degree of autonomy.
+
+==================================================
+AGENTIC AI COMPONENTS
+==================================================
+
+Important components commonly used in Agentic AI systems include:
+
+- Large Language Models
+- Prompt Engineering
+- Tool Calling
+- APIs
+- Memory
+- State Management
+- Planning
+- Reasoning
+- Retrieval-Augmented Generation (RAG)
+- Vector Databases
+- Embeddings
+- Workflow Orchestration
+- Human-in-the-Loop Controls
+- Monitoring and Evaluation
+
+==================================================
+AGENTIC AI LEARNING ROADMAP
+==================================================
+
+Stage 1: Python Fundamentals
+Learn Python syntax, functions, data structures, OOP, exception handling, modules, packages, and virtual environments.
+
+Stage 2: APIs
+Learn HTTP, REST APIs, JSON, requests, authentication, and API integration.
+
+Stage 3: Generative AI Fundamentals
+Learn Generative AI concepts, LLMs, tokens, context windows, temperature, hallucinations, prompting, and model inference.
+
+Stage 4: Prompt Engineering
+Learn zero-shot prompting, one-shot prompting, few-shot prompting, system instructions, structured prompts, and structured outputs.
+
+Stage 5: Embeddings
+Understand how text is converted into numerical vectors and how embeddings represent semantic meaning.
+
+Stage 6: Vector Databases and Similarity Search
+Learn vector storage, similarity search, FAISS, and the basic purpose of vector databases.
+
+Stage 7: RAG
+Learn document loading, text chunking, embeddings, vector storage, retrieval, context injection, and LLM-based answer generation.
+
+Stage 8: Tool Calling
+Learn how an LLM selects and calls external functions, APIs, databases, and other tools.
+
+Stage 9: AI Agents
+Learn goals, actions, observations, reasoning, planning, memory, state, and agent loops.
+
+Stage 10: Agent Frameworks
+Learn frameworks and libraries used to build agent workflows, such as LangChain and LangGraph.
+
+Stage 11: Multi-Agent Systems
+Learn how multiple specialized agents can communicate and collaborate on complex tasks.
+
+Stage 12: Safety and Evaluation
+Learn human approval mechanisms, permissions, guardrails, error handling, logging, monitoring, and evaluation of agent behavior.
+
+==================================================
+AGENTIC AI PROJECT IDEAS
+==================================================
+
+Beginner Project:
+AI Research Assistant
+- User provides a topic.
+- Agent searches or retrieves relevant information.
+- Agent organizes the information.
+- LLM generates a structured summary.
+
+Intermediate Project:
+AI Job Search Assistant
+- Analyze a resume.
+- Analyze a job description.
+- Identify skill gaps.
+- Retrieve career information.
+- Generate recommendations.
+- Use tools or APIs where appropriate.
+
+Intermediate Project:
+AI Customer Support Agent
+- Understand customer questions.
+- Retrieve information from a knowledge base.
+- Decide whether an external tool is required.
+- Generate an answer or escalate the issue.
+
+Advanced Project:
+Multi-Agent Software Development Assistant
+- Planning Agent breaks a requirement into tasks.
+- Coding Agent generates implementation.
+- Testing Agent evaluates the implementation.
+- Review Agent checks the result.
+- Agents exchange information through a shared workflow.
+
+==================================================
+AGENTIC AI CAREER SKILLS
+==================================================
+
+Useful skills for an Agentic AI developer include:
+
+- Python
+- Generative AI fundamentals
+- Large Language Models
+- Prompt Engineering
+- Structured Outputs
+- APIs
+- Tool Calling
+- RAG
+- Embeddings
+- Vector Databases
+- FAISS
+- LangChain
+- LangGraph
+- Memory and State Management
+- Workflow Design
+- Git and GitHub
+- Basic backend development
+- Flask or FastAPI
+- Databases
+- Testing and Evaluation
+
 
 ============================================================
 DATA ENGINEERING

@@ -3,154 +3,221 @@
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
     <title>Resume Analysis Results</title>
 
-    <!-- External CSS -->
     <link rel="stylesheet"
           href="{{ url_for('static', filename='style.css') }}">
 </head>
 
-
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <h1>Resume Analysis Results</h1>
-
-
-        <!-- MATCH SCORE -->
-
-        <div class="card">
-
-            <h2>Match Score</h2>
-
-            <p class="score">
-                {{ match_score }}%
-            </p>
-
-        </div>
+    <h1>Resume Analysis Results</h1>
 
 
-        <!-- RESUME SKILLS -->
+    <!-- MATCH SCORE -->
 
-        <div class="card">
+    <div class="result-section">
+        <h2>Match Score</h2>
 
-            <h2>Resume Skills</h2>
-
-            <ul>
-                {% for skill in resume_skills %}
-                    <li>{{ skill }}</li>
-                {% endfor %}
-            </ul>
-
-        </div>
+        <h3>
+            {{ match_score }}%
+        </h3>
+    </div>
 
 
-        <!-- JOB DESCRIPTION SKILLS -->
+    <!-- RESUME SKILLS -->
 
-        <div class="card">
+    <div class="result-section">
 
-            <h2>Job Description Skills</h2>
+        <h2>Resume Skills</h2>
 
-            <ul>
-                {% for skill in jd_skills %}
-                    <li>{{ skill }}</li>
-                {% endfor %}
-            </ul>
+        {% if resume_skills %}
 
-        </div>
+        <ul>
+            {% for skill in resume_skills %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
 
+        {% else %}
 
-        <!-- MATCHED SKILLS -->
+        <p>No resume skills were identified.</p>
 
-        <div class="card">
-
-            <h2>Matched Skills</h2>
-
-            <ul>
-                {% for skill in matched_skills %}
-                    <li>{{ skill }}</li>
-                {% endfor %}
-            </ul>
-
-        </div>
-
-
-        <!-- MISSING SKILLS -->
-
-        <div class="card">
-
-            <h2>Missing Skills</h2>
-
-            <ul>
-                {% for skill in missing_skills %}
-                    <li>{{ skill }}</li>
-                {% endfor %}
-            </ul>
-
-        </div>
-
-
-        <!-- RESUME STRENGTHS -->
-
-        <div class="card">
-
-            <h2>Resume Strengths</h2>
-
-            <ul>
-                {% for strength in strengths %}
-                    <li>{{ strength }}</li>
-                {% endfor %}
-            </ul>
-
-        </div>
-
-
-        <!-- SKILL GAP RECOMMENDATIONS -->
-
-        <div class="card">
-
-            <h2>Skill Gap Recommendations</h2>
-
-            <ul>
-                {% for skill in suggestion_missing_skills %}
-                    <li>{{ skill }}</li>
-                {% endfor %}
-            </ul>
-
-        </div>
-
-
-        <!-- RESUME IMPROVEMENT SUGGESTIONS -->
-
-        <div class="card">
-
-            <h2>Resume Improvement Suggestions</h2>
-
-            <ul>
-                {% for suggestion in improvement_suggestions %}
-                    <li>{{ suggestion }}</li>
-                {% endfor %}
-            </ul>
-
-        </div>
-
-
-        <!-- BACK LINK -->
-
-        <div class="card">
-
-            <a href="/">
-                ← Analyze Another Resume
-            </a>
-
-        </div>
+        {% endif %}
 
     </div>
+
+
+    <!-- JOB DESCRIPTION SKILLS -->
+
+    <div class="result-section">
+
+        <h2>Job Description Skills</h2>
+
+        {% if jd_skills %}
+
+        <ul>
+            {% for skill in jd_skills %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+
+        {% else %}
+
+        <p>No job description skills were identified.</p>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- MATCHED SKILLS -->
+
+    <div class="result-section">
+
+        <h2>Matched Skills</h2>
+
+        {% if matched_skills %}
+
+        <ul>
+            {% for skill in matched_skills %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+
+        {% else %}
+
+        <p>No matched skills were found.</p>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- MISSING SKILLS -->
+
+    <div class="result-section">
+
+        <h2>Missing Skills</h2>
+
+        {% if missing_skills %}
+
+        <ul>
+            {% for skill in missing_skills %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+
+        {% else %}
+
+        <p>No missing skills were identified.</p>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- RESUME STRENGTHS -->
+
+    <div class="result-section">
+
+        <h2>Resume Strengths</h2>
+
+        {% if strengths %}
+
+        <ul>
+            {% for strength in strengths %}
+            <li>{{ strength }}</li>
+            {% endfor %}
+        </ul>
+
+        {% else %}
+
+        <p>No strengths were generated.</p>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- SKILL GAP RECOMMENDATIONS -->
+
+    <div class="result-section">
+
+        <h2>Skill Gap Recommendations</h2>
+
+        {% if skill_gap_recommendations %}
+
+        <ul>
+
+            {% for recommendation in skill_gap_recommendations %}
+
+            <li>
+                {{ recommendation }}
+            </li>
+
+            {% endfor %}
+
+        </ul>
+
+        {% else %}
+
+        <p>
+            No skill-gap recommendations were generated.
+        </p>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- RESUME IMPROVEMENT SUGGESTIONS -->
+
+    <div class="result-section">
+
+        <h2>Resume Improvement Suggestions</h2>
+
+        {% if improvement_suggestions %}
+
+        <ul>
+
+            {% for suggestion in improvement_suggestions %}
+
+            <li>
+                {{ suggestion }}
+            </li>
+
+            {% endfor %}
+
+        </ul>
+
+        {% else %}
+
+        <p>
+            No resume improvement suggestions were generated.
+        </p>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- BACK BUTTON -->
+
+    <div class="back-section">
+
+        <a href="{{ url_for('home') }}">
+            ← Analyze Another Resume
+        </a>
+
+    </div>
+
+</div>
 
 </body>
 
